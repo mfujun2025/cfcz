@@ -247,9 +247,7 @@
         }
 
         /* 服务流程 */
-        .process-section {
-            background: #fff;
-        }
+        .process-section { background: #fff; }
         .process-steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -290,6 +288,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
+        a.article-card { display: block; color: inherit; }
         .article-card {
             background: #fff;
             border-radius: 10px;
@@ -430,6 +429,71 @@
         .float-btn:hover { transform: scale(1.1); }
         .float-btn.wechat { background: #07c160; box-shadow: 0 4px 16px rgba(7,193,96,0.4); }
         .float-btn.phone { background: #f59e0b; box-shadow: 0 4px 16px rgba(245,158,11,0.4); }
+
+        /* 微信弹窗 */
+        .wechat-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        .wechat-modal.show { display: flex; }
+        .wechat-modal-content {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 28px;
+            width: 320px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .wechat-modal-close {
+            position: absolute;
+            top: 12px; right: 16px;
+            font-size: 24px;
+            color: #999;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .wechat-modal-close:hover { color: #333; }
+        .wechat-modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a56db;
+            margin-bottom: 20px;
+        }
+        .wechat-id-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .wechat-id-row span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            letter-spacing: 1px;
+        }
+        .copy-btn {
+            padding: 6px 16px;
+            background: #07c160;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .copy-btn:hover { background: #06ad56; }
+        .wechat-modal-tip {
+            font-size: 12px;
+            color: #9ca3af;
+        }
 
         /* 响应式 */
         @media (max-width: 900px) {
@@ -606,7 +670,7 @@
 </section>
 
 <!-- 服务流程 -->
-<section class="section process-section">
+<section class="section process-section" id="process">
     <div class="container">
         <div class="section-title">
             <h2>服务流程</h2>
@@ -645,30 +709,34 @@
             <p>租厂房前必看，避坑指南与实用攻略</p>
         </div>
         <div class="article-grid">
-            <div class="article-card">
+
+            <a href="article-1.html" class="article-card">
                 <div class="article-img">📋</div>
                 <div class="article-body">
                     <span class="article-tag">避坑指南</span>
                     <h4>上海租厂房需要注意哪些事项？2026最新版</h4>
                     <p>从产权性质、环评要求、消防验收到合同条款，全面梳理租厂房必须核实的10个关键事项，避免踩坑...</p>
                 </div>
-            </div>
-            <div class="article-card">
+            </a>
+
+            <a href="article-2.html" class="article-card">
                 <div class="article-img">💰</div>
                 <div class="article-body">
                     <span class="article-tag">租金行情</span>
                     <h4>上海工业园区厂房租金多少钱一平米？各区价格对比</h4>
                     <p>宝山、嘉定、青浦、松江、奉贤各区域厂房租金行情一览，一楼、二楼、独栋价格差异分析，帮你预算...</p>
                 </div>
-            </div>
-            <div class="article-card">
+            </a>
+
+            <a href="article-3.html" class="article-card">
                 <div class="article-img">🏭</div>
                 <div class="article-body">
                     <span class="article-tag">环评攻略</span>
                     <h4>租厂房办环评有什么要求？哪些行业必须做环评？</h4>
                     <p>环评分类管理名录解读，哪些行业需要做环评报告表/书，厂房需要满足哪些条件才能通过环评审批...</p>
                 </div>
-            </div>
+            </a>
+
         </div>
     </div>
 </section>
@@ -711,8 +779,8 @@
             <div class="footer-col">
                 <h4>联系我们</h4>
                 <ul>
-                    <li>微信：13764427878</li>
-                    <li>邮箱：548827878@qq.com</li>
+                    <li>微信：你的微信号</li>
+                    <li>电话：13800138000</li>
                     <li>服务时间：9:00-18:00</li>
                     <li>服务区域：上海及周边</li>
                 </ul>
@@ -723,25 +791,42 @@
         </div>
     </div>
 </footer>
+
 <div class="footer-disclaimer">
     免责声明：本站为信息对接平台，所有厂房信息以园区实际为准。本站不向承租方收取任何费用，佣金由园区/业主方支付。
 </div>
 
 <!-- 悬浮客服 -->
 <div class="float-contact">
-    <div class="float-btn wechat" title="13764427878">💬</div>
-    <div class="float-btn phone" title="13764427878">📞</div>
+    <div class="float-btn wechat" id="floatWechat" title="微信咨询">💬</div>
+    <div class="float-btn phone" id="floatPhone" title="电话咨询">📞</div>
     <div class="float-btn" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
 </div>
 
+<!-- 微信弹窗 -->
+<div class="wechat-modal" id="wechatModal">
+    <div class="wechat-modal-content">
+        <span class="wechat-modal-close" onclick="closeWechatModal()">&times;</span>
+        <div class="wechat-modal-title">微信咨询</div>
+        <div class="wechat-id-row">
+            <span id="wechatIdText">你的微信号</span>
+            <button class="copy-btn" onclick="copyWechatId()">复制</button>
+        </div>
+        <div class="wechat-modal-tip">长按或点击复制微信号，打开微信添加好友</div>
+    </div>
+</div>
+
 <script>
+    // ===== 联系方式配置（部署前务必替换） =====
+    var WECHAT_ID = '你的微信号';
+    var PHONE_NUM = '13800138000';
+
     // 表单提交 - PushPlus推送到微信
     function handleSubmit(e) {
         e.preventDefault();
         var form = document.getElementById('leadForm');
         var data = {};
         new FormData(form).forEach(function(v, k) { data[k] = v; });
-
         var content = '厂房出租.com 新求租需求：\n' +
             '需求面积：' + (data.area || '未填写') + '\n' +
             '意向区域：' + (data.region || '未填写') + '\n' +
@@ -778,16 +863,78 @@
             }
         });
     });
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?7edd37a60685717c6dfac22d46cde354";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+
+    // ===== 悬浮客服交互 =====
+    // 微信按钮：弹出微信号
+    document.getElementById('floatWechat').addEventListener('click', function() {
+        document.getElementById('wechatIdText').textContent = WECHAT_ID;
+        document.getElementById('wechatModal').classList.add('show');
+    });
+
+    function closeWechatModal() {
+        document.getElementById('wechatModal').classList.remove('show');
+    }
+
+    // 点击弹窗外部关闭
+    document.getElementById('wechatModal').addEventListener('click', function(e) {
+        if (e.target === this) closeWechatModal();
+    });
+
+    // 复制微信号
+    function copyWechatId() {
+        copyText(WECHAT_ID, '微信号已复制，打开微信粘贴添加');
+    }
+
+    // 电话按钮：手机端拨号，电脑端复制
+    document.getElementById('floatPhone').addEventListener('click', function() {
+        var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.href = 'tel:' + PHONE_NUM;
+        } else {
+            copyText(PHONE_NUM, '电话号码已复制：' + PHONE_NUM);
+        }
+    });
+
+    // 通用复制函数
+    function copyText(text, successMsg) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert(successMsg);
+            }).catch(function() {
+                fallbackCopy(text, successMsg);
+            });
+        } else {
+            fallbackCopy(text, successMsg);
+        }
+    }
+
+    function fallbackCopy(text, successMsg) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            document.execCommand('copy');
+            alert(successMsg);
+        } catch (e) {
+            alert('复制失败，请手动复制：' + text);
+        }
+        document.body.removeChild(ta);
+    }
 </script>
 
+<!-- 百度统计代码（部署时替换为你的统计ID） -->
+<script>
+    // var _hmt = _hmt || [];
+    // (function() {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?你的百度统计ID";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
 
 </body>
 </html>
