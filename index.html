@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海厂房出租_工业园区仓库招租_免费对接厂房资源</title>
+    <meta name="description" content="厂房出租.com专注上海工业园区厂房、仓库、独栋厂房出租信息对接，覆盖宝山、嘉定、青浦、松江等区域，可环评、带行车、层高8米，免费为求租企业对接优质厂房资源。">
+    <meta name="keywords" content="上海厂房出租,工业园区厂房,仓库招租,宝山厂房出租,嘉定厂房,青浦厂房,可环评厂房,带行车厂房,独栋厂房出租,小面积厂房">
+    <meta name="author" content="厂房出租.com">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://厂房出租.com/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f5f7fa;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* 顶部导航 */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a56db;
+        }
+        .logo span { color: #f59e0b; }
+        .nav { display: flex; gap: 28px; }
+        .nav a {
+            font-size: 15px;
+            color: #555;
+            transition: color 0.2s;
+        }
+        .nav a:hover { color: #1a56db; }
+        .header-phone {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a56db;
+        }
+
+        /* Hero区域 */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1a56db 50%, #3b82f6 100%);
+            color: #fff;
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: #fbbf24;
+        }
+        .hero-subtitle {
+            font-size: 17px;
+            opacity: 0.9;
+            margin-bottom: 28px;
+        }
+        .hero-features {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            opacity: 0.95;
+        }
+        .hero-feature::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: #fbbf24;
+            color: #1e3a8a;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* 求租表单 */
+        .lead-form {
+            background: #fff;
+            border-radius: 12px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .lead-form h3 {
+            font-size: 20px;
+            color: #1a56db;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .lead-form p {
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group { margin-bottom: 14px; }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .form-group label .required { color: #ef4444; }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #1a56db;
+            box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.2s;
+            margin-top: 6px;
+        }
+        .submit-btn:hover {
+            box-shadow: 0 4px 12px rgba(245,158,11,0.4);
+        }
+        .submit-btn:active { transform: scale(0.98); }
+        .form-note {
+            font-size: 12px;
+            color: #9ca3af;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* 热门需求 */
+        .section { padding: 60px 0; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 28px;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        .section-title p {
+            font-size: 15px;
+            color: #6b7280;
+        }
+        .demand-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .demand-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .demand-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .demand-icon {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 14px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .demand-card h4 {
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 6px;
+        }
+        .demand-card p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* 服务流程 */
+        .process-section {
+            background: #fff;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, #1a56db, #3b82f6);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .process-step h4 {
+            font-size: 17px;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        .process-step p {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        /* 资讯文章 */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .article-card:hover { transform: translateY(-3px); }
+        .article-img {
+            height: 160px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 40px;
+        }
+        .article-body { padding: 20px; }
+        .article-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: #dbeafe;
+            color: #1a56db;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .article-card h4 {
+            font-size: 16px;
+            color: #1f2937;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .article-card p {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        /* 底部CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a, #1a56db);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+        .cta-section p {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: #f59e0b;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover { background: #d97706; }
+
+        /* 页脚 */
+        .footer {
+            background: #1f2937;
+            color: #9ca3af;
+            padding: 40px 0 24px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .footer-brand p {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .footer-disclaimer {
+            background: #111827;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        /* 悬浮客服 */
+        .float-contact {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .float-btn {
+            width: 56px;
+            height: 56px;
+            background: #1a56db;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 16px rgba(26,86,219,0.4);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-btn.wechat { background: #07c160; box-shadow: 0 4px 16px rgba(7,193,96,0.4); }
+        .float-btn.phone { background: #f59e0b; box-shadow: 0 4px 16px rgba(245,158,11,0.4); }
+
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .hero-content { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 28px; }
+            .demand-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .article-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .nav { display: none; }
+        }
+        @media (max-width: 480px) {
+            .demand-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">厂房出租<span>.com</span></div>
+        <nav class="nav">
+            <a href="#demand">热门需求</a>
+            <a href="#process">服务流程</a>
+            <a href="#articles">厂房知识</a>
+            <a href="#contact">联系我们</a>
+        </nav>
+        <div class="header-phone">📞 免费对接：见页脚微信</div>
+    </div>
+</header>
+
+<!-- Hero区域 -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-left">
+            <h1>上海厂房出租<br><em>免费对接</em>优质工业园区资源</h1>
+            <p class="hero-subtitle">覆盖宝山、嘉定、青浦、松江、奉贤等区域，标准厂房、独栋厂房、仓库仓储，可环评、带行车、层高8米，一对一免费匹配</p>
+            <div class="hero-features">
+                <div class="hero-feature">不向承租方收费</div>
+                <div class="hero-feature">1对1精准匹配</div>
+                <div class="hero-feature">全程免费带看</div>
+                <div class="hero-feature">工业园区直签</div>
+            </div>
+        </div>
+        <div class="lead-form" id="contact">
+            <h3>免费求租登记</h3>
+            <p>填写需求，1个工作日内为您匹配厂房</p>
+            <form id="leadForm" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>需求面积 <span class="required">*</span></label>
+                        <select name="area" required>
+                            <option value="">请选择</option>
+                            <option value="300以下">300㎡以下</option>
+                            <option value="300-500">300-500㎡</option>
+                            <option value="500-1000">500-1000㎡</option>
+                            <option value="1000-2000">1000-2000㎡</option>
+                            <option value="2000-5000">2000-5000㎡</option>
+                            <option value="5000以上">5000㎡以上</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>期望区域 <span class="required">*</span></label>
+                        <select name="region" required>
+                            <option value="">请选择</option>
+                            <option value="宝山">宝山区</option>
+                            <option value="嘉定">嘉定区</option>
+                            <option value="青浦">青浦区</option>
+                            <option value="松江">松江区</option>
+                            <option value="奉贤">奉贤区</option>
+                            <option value="金山">金山区</option>
+                            <option value="浦东">浦东新区</option>
+                            <option value="周边">上海周边（昆山/太仓）</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>行业类型</label>
+                        <select name="industry">
+                            <option value="">请选择</option>
+                            <option value="生产加工">生产加工</option>
+                            <option value="仓储物流">仓储物流</option>
+                            <option value="五金机械">五金机械</option>
+                            <option value="电子装配">电子装配</option>
+                            <option value="食品加工">食品加工</option>
+                            <option value="电商仓储">电商仓储</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>特殊要求</label>
+                        <select name="requirement">
+                            <option value="">请选择</option>
+                            <option value="可环评">可办环评</option>
+                            <option value="带行车">带行车/航车</option>
+                            <option value="层高8米">层高8米以上</option>
+                            <option value="一楼">一楼厂房</option>
+                            <option value="独栋">独门独院</option>
+                            <option value="带宿舍">带宿舍办公</option>
+                            <option value="无">无特殊要求</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>您的称呼 <span class="required">*</span></label>
+                    <input type="text" name="name" placeholder="先生/女士" required>
+                </div>
+                <div class="form-group">
+                    <label>联系电话/微信 <span class="required">*</span></label>
+                    <input type="text" name="contact" placeholder="手机号或微信号" required>
+                </div>
+                <button type="submit" class="submit-btn">免费提交需求</button>
+                <p class="form-note">🔒 您的信息仅用于厂房对接，绝不外泄</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- 热门需求 -->
+<section class="section" id="demand">
+    <div class="container">
+        <div class="section-title">
+            <h2>热门厂房需求</h2>
+            <p>根据企业常见需求，精准匹配上海各区域优质厂房</p>
+        </div>
+        <div class="demand-grid">
+            <div class="demand-card">
+                <div class="demand-icon">🏭</div>
+                <h4>标准厂房</h4>
+                <p>1000-5000㎡，工业园区，配套齐全</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">🏗️</div>
+                <h4>独栋厂房</h4>
+                <p>独门独院，带办公宿舍，适合生产总部</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">📦</div>
+                <h4>仓库仓储</h4>
+                <p>一楼层高，大车进出方便，电商物流首选</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">⚙️</div>
+                <h4>可环评厂房</h4>
+                <p>工业园区内，工业用地，支持生产加工环评</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">🚜</div>
+                <h4>带行车厂房</h4>
+                <p>层高8米以上，预装5-10吨行车，机械加工</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">🏢</div>
+                <h4>小面积厂房</h4>
+                <p>300-800㎡，可分割，适合初创小微企业</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">🚚</div>
+                <h4>靠近高速厂房</h4>
+                <p>G15/G2/G50高速口附近，物流运输便捷</p>
+            </div>
+            <div class="demand-card">
+                <div class="demand-icon">🔌</div>
+                <h4>大电量厂房</h4>
+                <p>独立变压器，大容量用电，适合设备密集型</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 服务流程 -->
+<section class="section process-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>服务流程</h2>
+            <p>四步搞定厂房租赁，全程免费，省心省力</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>提交需求</h4>
+                <p>在线填写面积、区域、行业等需求，1分钟完成</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>精准匹配</h4>
+                <p>根据需求从合作园区中筛选3-5套最合适厂房</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>免费带看</h4>
+                <p>安排专车或自行前往，全程陪同讲解，不收费用</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>签约入驻</h4>
+                <p>协助谈判租金、合同条款，与园区直签，安心入驻</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 资讯文章 -->
+<section class="section" id="articles">
+    <div class="container">
+        <div class="section-title">
+            <h2>厂房租赁知识</h2>
+            <p>租厂房前必看，避坑指南与实用攻略</p>
+        </div>
+        <div class="article-grid">
+            <div class="article-card">
+                <div class="article-img">📋</div>
+                <div class="article-body">
+                    <span class="article-tag">避坑指南</span>
+                    <h4>上海租厂房需要注意哪些事项？2026最新版</h4>
+                    <p>从产权性质、环评要求、消防验收到合同条款，全面梳理租厂房必须核实的10个关键事项，避免踩坑...</p>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-img">💰</div>
+                <div class="article-body">
+                    <span class="article-tag">租金行情</span>
+                    <h4>上海工业园区厂房租金多少钱一平米？各区价格对比</h4>
+                    <p>宝山、嘉定、青浦、松江、奉贤各区域厂房租金行情一览，一楼、二楼、独栋价格差异分析，帮你预算...</p>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-img">🏭</div>
+                <div class="article-body">
+                    <span class="article-tag">环评攻略</span>
+                    <h4>租厂房办环评有什么要求？哪些行业必须做环评？</h4>
+                    <p>环评分类管理名录解读，哪些行业需要做环评报告表/书，厂房需要满足哪些条件才能通过环评审批...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 底部CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>还在为找厂房发愁？</h2>
+        <p>免费提交需求，专业团队1对1为您匹配上海优质厂房资源</p>
+        <a href="#contact" class="cta-btn">立即免费登记求租需求</a>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>厂房出租.com</h3>
+                <p>专注上海工业园区厂房、仓库出租信息对接服务，连接求租企业与优质园区资源，全程免费，不向承租方收取任何费用。</p>
+            </div>
+            <div class="footer-col">
+                <h4>区域厂房</h4>
+                <ul>
+                    <li><a href="#">宝山厂房出租</a></li>
+                    <li><a href="#">嘉定厂房出租</a></li>
+                    <li><a href="#">青浦厂房出租</a></li>
+                    <li><a href="#">松江厂房出租</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门需求</h4>
+                <ul>
+                    <li><a href="#">可环评厂房</a></li>
+                    <li><a href="#">带行车厂房</a></li>
+                    <li><a href="#">独栋厂房出租</a></li>
+                    <li><a href="#">小面积厂房</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>微信：（请填写您的微信号）</li>
+                    <li>邮箱：（请填写邮箱）</li>
+                    <li>服务时间：9:00-18:00</li>
+                    <li>服务区域：上海及周边</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 厂房出租.com 版权所有 | 本站仅提供信息对接服务，不参与租赁交易</p>
+        </div>
+    </div>
+</footer>
+<div class="footer-disclaimer">
+    免责声明：本站为信息对接平台，所有厂房信息以园区实际为准。本站不向承租方收取任何费用，佣金由园区/业主方支付。
+</div>
+
+<!-- 悬浮客服 -->
+<div class="float-contact">
+    <div class="float-btn wechat" title="微信咨询">💬</div>
+    <div class="float-btn phone" title="电话咨询">📞</div>
+    <div class="float-btn" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+</div>
+
+<script>
+    // 表单提交 - PushPlus推送到微信
+    function handleSubmit(e) {
+        e.preventDefault();
+        var form = document.getElementById('leadForm');
+        var data = {};
+        new FormData(form).forEach(function(v, k) { data[k] = v; });
+
+        var content = '厂房出租.com 新求租需求：\n' +
+            '需求面积：' + (data.area || '未填写') + '\n' +
+            '意向区域：' + (data.region || '未填写') + '\n' +
+            '所属行业：' + (data.industry || '未填写') + '\n' +
+            '特殊要求：' + (data.requirement || '无') + '\n' +
+            '联系人：' + (data.name || '未填写') + '\n' +
+            '联系方式：' + (data.contact || '未填写');
+
+        fetch('https://www.pushplus.plus/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                token: '37af69b210224201a5c4ff5a973d36c1',
+                title: '厂房出租｜新求租线索',
+                content: content
+            })
+        })
+        .then(function() {
+            alert('提交成功！我们将在1个工作日内与您联系，请保持电话/微信畅通。');
+            form.reset();
+        })
+        .catch(function() {
+            alert('提交异常，请直接添加页面微信联系我们！');
+        });
+    }
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+
+<!-- 百度统计代码（部署时替换为你的统计ID） -->
+<script>
+    // var _hmt = _hmt || [];
+    // (function() {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?你的百度统计ID";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+
+</body>
+</html>
