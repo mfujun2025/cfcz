@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>厂房用电与变压器增容指南（2026最新） - 厂房出租.com</title>
+    <meta name="description" content="上海厂房用电全攻略：变压器容量选择、用电负荷计算、工业用电价格、租赁厂房用电考察要点、变压器增容办理流程、增容费用明细、常见用电问题解决方案、节能降耗建议、避坑清单。">
+    <meta name="keywords" content="厂房用电,变压器增容,工业用电,用电负荷计算,上海工业用电价格,厂房配电,增容费用">
+    <link rel="canonical" href="https://厂房出租.com/article-11.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #333; line-height: 1.8; background: #f5f7fa;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        .header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+        .logo { font-size: 22px; font-weight: 700; color: #1a56db; }
+        .logo span { color: #f59e0b; }
+        .back-link { font-size: 14px; color: #1a56db; }
+
+        .article-wrap { background: #fff; margin: 30px 0; padding: 40px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .article-tag { display: inline-block; padding: 3px 10px; background: #dbeafe; color: #1e40af; font-size: 12px; border-radius: 4px; margin-bottom: 14px; }
+        .article-wrap h1 { font-size: 26px; color: #1f2937; line-height: 1.4; margin-bottom: 14px; }
+        .article-meta { font-size: 13px; color: #9ca3af; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .article-wrap h2 { font-size: 20px; color: #1a56db; margin: 30px 0 12px; padding-left: 10px; border-left: 4px solid #1a56db; }
+        .article-wrap h3 { font-size: 17px; color: #1f2937; margin: 22px 0 10px; }
+        .article-wrap p { margin-bottom: 14px; color: #444; }
+        .article-wrap ul, .article-wrap ol { margin: 10px 0 16px 24px; }
+        .article-wrap li { margin-bottom: 8px; color: #444; }
+        .article-wrap strong { color: #1f2937; }
+
+        .elec-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+        .elec-table th { background: #1a56db; color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+        .elec-table td { padding: 10px 12px; border-bottom: 1px solid #eee; color: #444; vertical-align: top; }
+        .elec-table tr:nth-child(even) { background: #eff6ff; }
+        .elec-table tr:hover { background: #dbeafe; }
+
+        .flow-box { background: #f8fafc; border-left: 4px solid #1a56db; padding: 16px 20px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+        .flow-box h4 { font-size: 15px; color: #1e40af; margin-bottom: 6px; }
+        .flow-box p { margin-bottom: 0; font-size: 14px; }
+
+        .tip-box { background: #dbeafe; border-left: 4px solid #1a56db; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .tip-box p { margin-bottom: 0; color: #1e40af; }
+        .warn-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .warn-box p { margin-bottom: 0; color: #92400e; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .danger-box p { margin-bottom: 0; color: #991b1b; }
+
+        .cta-box { background: linear-gradient(135deg, #1e3a8a, #1a56db); color: #fff; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 8px; }
+        .cta-box p { font-size: 14px; opacity: 0.9; margin-bottom: 16px; }
+        .cta-btn { display: inline-block; padding: 12px 32px; background: #f59e0b; color: #fff; border-radius: 6px; font-size: 15px; font-weight: 600; }
+
+        .footer { background: #1f2937; color: #9ca3af; padding: 30px 0; text-align: center; font-size: 12px; margin-top: 40px; }
+
+        .float-contact { position: fixed; right: 20px; bottom: 80px; z-index: 99; display: flex; flex-direction: column; gap: 10px; }
+        .float-btn { width: 56px; height: 56px; background: #1a56db; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 16px rgba(26,86,219,0.4); cursor: pointer; transition: transform 0.2s; }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-btn.wechat { background: #07c160; box-shadow: 0 4px 16px rgba(7,193,96,0.4); }
+        .float-btn.phone { background: #f59e0b; box-shadow: 0 4px 16px rgba(245,158,11,0.4); }
+
+        .wechat-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; }
+        .wechat-modal.show { display: flex; }
+        .wechat-modal-content { background: #fff; border-radius: 12px; padding: 32px 28px; width: 320px; text-align: center; position: relative; }
+        .wechat-modal-close { position: absolute; top: 12px; right: 16px; font-size: 24px; color: #999; cursor: pointer; }
+        .wechat-modal-title { font-size: 18px; font-weight: 600; color: #1a56db; margin-bottom: 20px; }
+        .wechat-id-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; }
+        .wechat-id-row span { font-size: 20px; font-weight: 700; color: #1f2937; }
+        .copy-btn { padding: 6px 16px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; }
+        .wechat-modal-tip { font-size: 12px; color: #9ca3af; }
+
+        @media (max-width: 600px) {
+            .article-wrap { padding: 24px 18px; margin: 16px 0; }
+            .article-wrap h1 { font-size: 21px; }
+            .elec-table { font-size: 12px; }
+            .elec-table th, .elec-table td { padding: 8px 6px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">厂房出租<span>.com</span></a>
+        <a href="index.html" class="back-link">← 返回首页</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="article-wrap">
+        <span class="article-tag">用电指南</span>
+        <h1>厂房用电与变压器增容指南（2026最新）</h1>
+        <div class="article-meta">发布时间：2026-09-11 &nbsp;|&nbsp; 阅读：约7分钟</div>
+
+        <p>厂房用电是企业生产的基础保障，也是租赁厂房时最容易被忽视的环节。很多企业租了厂房才发现变压器容量不够，设备一开就跳闸，申请增容又要等几个月、花几十万，严重影响投产进度。本文详细梳理厂房用电的基本知识、租赁考察要点、变压器增容流程和费用，帮你在租厂房前就把用电问题搞清楚。</p>
+
+        <div class="warn-box">
+            <p><strong>常见教训：</strong>某机械加工企业租了2000㎡厂房，投产时才发现原有变压器只有100KVA，而设备总功率需要300KVA。申请增容花了45万、等了3个月，期间只能租发电机临时供电，每天租金2000元，直接损失超过20万。</p>
+        </div>
+
+        <h2>一、厂房用电的基本概念</h2>
+
+        <h3>1. 变压器容量（KVA）</h3>
+        <p>变压器容量是厂房用电的核心指标，单位是千伏安（KVA）。常见的厂房变压器容量有：50KVA、80KVA、100KVA、160KVA、200KVA、250KVA、315KVA、400KVA、500KVA、630KVA、800KVA、1000KVA、1250KVA、1600KVA、2000KVA等。</p>
+        <p>变压器容量越大，能带动的设备越多。一般来说，1KVA大约可以带动0.8-0.9KW的用电设备（考虑功率因数）。</p>
+
+        <h3>2. 用电负荷计算</h3>
+        <p>租厂房前，必须先算清楚自己的用电负荷。计算方法：</p>
+        <ul>
+            <li><strong>设备总功率：</strong>把所有生产设备、空调、照明、办公设备的额定功率加起来</li>
+            <li><strong>同时系数：</strong>所有设备不会同时满负荷运行，一般取0.6-0.8</li>
+            <li><strong>需要系数：</strong>不同行业的需要系数不同，机械加工0.35-0.45，电子装配0.4-0.5，食品加工0.5-0.6，纺织0.6-0.7</li>
+            <li><strong>计算负荷 = 设备总功率 × 需要系数 × 同时系数</strong></li>
+            <li><strong>所需变压器容量 = 计算负荷 ÷ 0.85（功率因数）÷ 0.8（变压器负载率）</strong></li>
+        </ul>
+
+        <div class="tip-box">
+            <p><strong>简单估算：</strong>如果你的设备总功率是200KW，按需要系数0.5、同时系数0.7计算，计算负荷=200×0.5×0.7=70KW，所需变压器容量=70÷0.85÷0.8≈103KVA，选100KVA或160KVA变压器即可。建议预留20%-30%的余量，方便后续增加设备。</p>
+        </div>
+
+        <h3>3. 不同行业的用电参考</h3>
+        <table class="elec-table">
+            <thead>
+                <tr>
+                    <th>行业类型</th>
+                    <th>典型设备</th>
+                    <th>每1000㎡用电负荷</th>
+                    <th>建议变压器容量</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>电子装配</td>
+                    <td>流水线、烙铁、测试仪器、空调</td>
+                    <td>30-50KW</td>
+                    <td>50-80KVA</td>
+                </tr>
+                <tr>
+                    <td>服装加工</td>
+                    <td>缝纫机、熨烫设备、裁剪机、空调</td>
+                    <td>40-60KW</td>
+                    <td>80-100KVA</td>
+                </tr>
+                <tr>
+                    <td>食品加工</td>
+                    <td>烤箱、冷冻机、搅拌机、包装机</td>
+                    <td>60-100KW</td>
+                    <td>100-160KVA</td>
+                </tr>
+                <tr>
+                    <td>五金机械</td>
+                    <td>车床、铣床、磨床、钻床、焊机</td>
+                    <td>80-150KW</td>
+                    <td>160-250KVA</td>
+                </tr>
+                <tr>
+                    <td>注塑成型</td>
+                    <td>注塑机、模温机、粉碎机、冷水机</td>
+                    <td>100-200KW</td>
+                    <td>200-315KVA</td>
+                </tr>
+                <tr>
+                    <td>钣金冲压</td>
+                    <td>冲床、折弯机、剪板机、焊机</td>
+                    <td>120-250KW</td>
+                    <td>250-400KVA</td>
+                </tr>
+                <tr>
+                    <td>铸造锻造</td>
+                    <td>熔炉、锻压机、热处理炉、空压机</td>
+                    <td>200-500KW</td>
+                    <td>400-800KVA</td>
+                </tr>
+                <tr>
+                    <td>仓储物流</td>
+                    <td>货架照明、叉车充电、分拣设备、空调</td>
+                    <td>20-40KW</td>
+                    <td>50-80KVA</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. 上海工业用电价格（2026年）</h3>
+        <p>上海工业用电实行分时电价，分为高峰、平段、低谷三个时段，电压等级不同价格也不同：</p>
+        <ul>
+            <li><strong>高峰时段（8:00-11:00, 13:00-15:00, 18:00-21:00）：</strong>约1.1-1.3元/度</li>
+            <li><strong>平段时段（6:00-8:00, 11:00-13:00, 15:00-18:00, 21:00-22:00）：</strong>约0.7-0.8元/度</li>
+            <li><strong>低谷时段（22:00-次日6:00）：</strong>约0.3-0.4元/度</li>
+        </ul>
+        <p>此外还有基本电费（按变压器容量收取，约30元/KVA/月）和功率因数调整电费。如果功率因数低于0.9，会被罚款；高于0.95，会有奖励。</p>
+
+        <div class="tip-box">
+            <p><strong>省钱技巧：</strong>大容量用电设备尽量安排在低谷时段运行，比如铸造、热处理、注塑等可以24小时生产的行业，低谷电价只有高峰的1/3，一年能省不少电费。另外安装无功补偿装置，把功率因数提高到0.95以上，可以获得电费奖励。</p>
+        </div>
+
+        <h2>二、租赁厂房时的用电考察要点</h2>
+
+        <h3>1. 核实变压器容量和归属</h3>
+        <ul>
+            <li><strong>看铭牌：</strong>到配电房看变压器铭牌，确认实际容量，不要只听房东说</li>
+            <li><strong>看归属：</strong>变压器是房东专变还是供电局公变？专变由房东维护，公变由供电局维护</li>
+            <li><strong>看余量：</strong>现有变压器已经用了多少？还剩多少容量给你用？如果厂房里还有其他租户，要问清楚容量怎么分配</li>
+            <li><strong>看电费：</strong>电费是交给供电局还是交给房东？交给房东的话，电价是多少？有没有加价？</li>
+        </ul>
+
+        <div class="danger-box">
+            <p><strong>最常见的坑：</strong>房东说变压器有315KVA，实际只有160KVA；或者变压器是房东的专变，电费加价30%卖给租户，比供电局贵很多。签约前一定要到配电房看铭牌、看电费单，确认实际容量和电价。</p>
+        </div>
+
+        <h3>2. 检查配电设施</h3>
+        <ul>
+            <li><strong>配电房位置：</strong>配电房在哪里？离你的生产区域有多远？电缆敷设是否方便？</li>
+            <li><strong>配电柜：</strong>配电柜有多少回路？每个回路的容量是多少？有没有空余回路给你用？</li>
+            <li><strong>电缆：</strong>从配电房到车间的电缆规格是多少？能不能满足你的用电需求？</li>
+            <li><strong>接地：</strong>厂房有没有可靠的接地系统？接地电阻是否合格？</li>
+            <li><strong>无功补偿：</strong>有没有无功补偿装置？功率因数能不能达到0.9以上？</li>
+        </ul>
+
+        <h3>3. 确认增容可行性</h3>
+        <ul>
+            <li><strong>供电容量：</strong>当地供电局还有没有供电容量？能不能增容？有些区域电网饱和，无法增容</li>
+            <li><strong>增容空间：</strong>配电房有没有空间放更大的变压器？外线能不能接入？</li>
+            <li><strong>增容费用：</strong>如果需要增容，费用由谁承担？房东还是租户？合同中要写清楚</li>
+            <li><strong>增容周期：</strong>增容一般需要2-6个月，要提前规划，不要等投产了才申请</li>
+        </ul>
+
+        <h3>4. 备用电源和双回路</h3>
+        <ul>
+            <li><strong>停电影响：</strong>你的生产能不能停电？停电会不会造成产品报废、设备损坏？</li>
+            <li><strong>双回路供电：</strong>重要企业可以申请双回路供电，一路停电另一路自动切换，但费用较高</li>
+            <li><strong>自备发电机：</strong>可以自备柴油发电机作为备用，但要注意环保要求和噪音</li>
+            <li><strong>UPS不间断电源：</strong>精密设备、数据中心等需要配UPS，防止突然断电损坏设备</li>
+        </ul>
+
+        <h2>三、变压器增容办理流程</h2>
+
+        <div class="flow-box">
+            <h4>第一步：用电申请</h4>
+            <p>到当地供电局营业厅或通过"网上国网"APP提交用电申请，需要提供：营业执照、法人身份证、厂房租赁合同或产权证明、用电设备清单、用电负荷计算书。</p>
+            <p><strong>注意：</strong>如果是租户申请，需要房东出具同意增容的书面证明，并且明确增容后变压器的归属和维护责任。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第二步：供电方案答复</h4>
+            <p>供电局受理后，会安排现场勘查，根据你的用电需求和电网情况，制定供电方案。一般10个工作日内答复。</p>
+            <p>供电方案包括：供电电压、供电容量、接入点、计量方式、计费方式、外线工程范围等。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第三步：设计审查</h4>
+            <p>根据供电方案，委托有电力设计资质的单位进行受电工程设计，设计图纸报供电局审查。审查通过后才能施工。</p>
+            <p><strong>注意：</strong>设计单位必须具备相应的电力设计资质（丙级及以上），否则设计无效。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第四步：工程施工</h4>
+            <p>委托有电力施工资质的单位进行受电工程施工，包括变压器安装、配电柜安装、电缆敷设、接地装置等。施工过程中供电局会进行中间检查。</p>
+            <p><strong>注意：</strong>施工单位必须具备承装（修、试）电力设施许可证，否则工程无法通过验收。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第五步：竣工验收</h4>
+            <p>工程完工后，向供电局申请竣工验收。供电局会组织现场验收，检查工程质量、设备参数、安全措施等。验收合格后出具验收报告。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第六步：装表接电</h4>
+            <p>验收合格后，供电局安装计量装置（电表），签订供用电合同，然后正式接电。整个流程一般需要2-6个月，具体时间取决于增容规模和电网情况。</p>
+        </div>
+
+        <h2>四、变压器增容费用明细</h2>
+        <p>变压器增容费用包括供电局收取的费用和用户受电工程费用两部分：</p>
+
+        <table class="elec-table">
+            <thead>
+                <tr>
+                    <th>费用项目</th>
+                    <th>收费标准</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>高可靠性供电费</td>
+                    <td>约200-300元/KVA</td>
+                    <td>双回路供电收取，单回路不收</td>
+                </tr>
+                <tr>
+                    <td>临时接电费</td>
+                    <td>约10-20元/KVA</td>
+                    <td>临时用电收取，正式用电后退还</td>
+                </tr>
+                <tr>
+                    <td>变压器设备费</td>
+                    <td>80-150元/KVA</td>
+                    <td>油浸式变压器便宜，干式变压器贵</td>
+                </tr>
+                <tr>
+                    <td>配电柜费</td>
+                    <td>1-5万元/面</td>
+                    <td>根据回路数和开关品牌而定</td>
+                </tr>
+                <tr>
+                    <td>电缆费</td>
+                    <td>100-500元/米</td>
+                    <td>根据电缆规格和长度而定</td>
+                </tr>
+                <tr>
+                    <td>设计费</td>
+                    <td>工程总造价的3%-5%</td>
+                    <td>有资质的电力设计单位收取</td>
+                </tr>
+                <tr>
+                    <td>施工费</td>
+                    <td>工程总造价的10%-15%</td>
+                    <td>有资质的电力施工单位收取</td>
+                </tr>
+                <tr>
+                    <td>验收费</td>
+                    <td>0.5-1万元</td>
+                    <td>包括试验费、检测费</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <p><strong>费用参考：</strong>100KVA增容到315KVA，总费用大约15-25万元；315KVA增容到630KVA，总费用大约30-50万元；630KVA增容到1000KVA，总费用大约50-80万元。具体费用取决于现场条件、设备品牌和施工难度。</p>
+        </div>
+
+        <h2>五、常见用电问题与解决方案</h2>
+
+        <h3>1. 电压不稳、设备跳闸</h3>
+        <p><strong>原因：</strong>变压器容量不足、线路压降大、大功率设备启动冲击。</p>
+        <p><strong>解决方案：</strong>如果是容量不足，需要增容；如果是线路问题，更换更粗的电缆；如果是启动冲击，加装软启动器或变频器。</p>
+
+        <h3>2. 功率因数低、被罚款</h3>
+        <p><strong>原因：</strong>感性设备多（电机、变压器），没有无功补偿装置。</p>
+        <p><strong>解决方案：</strong>安装无功补偿装置（电容柜），把功率因数提高到0.9以上。一般100KVA以上变压器都建议安装。</p>
+
+        <h3>3. 三相不平衡</h3>
+        <p><strong>原因：</strong>单相设备接在同一相上，导致三相电流不平衡。</p>
+        <p><strong>解决方案：</strong>合理分配单相设备，尽量使三相负荷平衡。三相不平衡度超过10%会增加线损、影响设备寿命。</p>
+
+        <h3>4. 电费过高</h3>
+        <p><strong>原因：</strong>高峰用电多、功率因数低、设备效率低、变压器空载损耗大。</p>
+        <p><strong>解决方案：</strong>错峰用电、安装无功补偿、更换节能设备、变压器经济运行。</p>
+
+        <h3>5. 停电频繁</h3>
+        <p><strong>原因：</strong>电网检修、线路故障、变压器过载。</p>
+        <p><strong>解决方案：</strong>申请双回路供电、自备发电机、安装UPS。重要设备一定要有备用电源。</p>
+
+        <h2>六、工业用电节能降耗建议</h2>
+        <ol>
+            <li><strong>更换节能设备：</strong>老旧电机更换为YE3、YE4系列高效电机，能效提高5%-10%</li>
+            <li><strong>加装变频器：</strong>风机、水泵、空压机等设备加装变频器，按需调速，节能20%-50%</li>
+            <li><strong>错峰用电：</strong>大容量设备安排在低谷时段运行，电价只有高峰的1/3</li>
+            <li><strong>提高功率因数：</strong>安装无功补偿装置，避免罚款、获得奖励</li>
+            <li><strong>变压器经济运行：</strong>多台变压器时，根据负荷情况合理投切，避免空载损耗</li>
+            <li><strong>照明节能：</strong>更换为LED灯具，安装人体感应和光控开关，节能50%以上</li>
+            <li><strong>空压系统节能：</strong>减少漏气、合理设置压力、采用变频空压机，节能15%-30%</li>
+            <li><strong>空调系统节能：</strong>定期清洗滤网、合理设置温度、采用变频空调，节能20%-30%</li>
+            <li><strong>余热回收：</strong>生产过程中的余热回收利用，用于供暖、热水、预热等</li>
+            <li><strong>能源管理：</strong>安装能源管理系统，实时监控用电情况，发现异常及时处理</li>
+        </ol>
+
+        <h2>七、用电避坑清单</h2>
+        <ol>
+            <li><strong>不要只听房东说容量：</strong>一定要到配电房看变压器铭牌，确认实际容量</li>
+            <li><strong>不要忽略电费单价：</strong>问清楚电费是交给供电局还是房东，有没有加价</li>
+            <li><strong>不要低估用电负荷：</strong>设备总功率要算全，预留20%-30%余量，不要刚好够用</li>
+            <li><strong>不要等投产才增容：</strong>增容需要2-6个月，签约前就确认好容量，不够就提前申请</li>
+            <li><strong>不要找无资质单位施工：</strong>电力工程必须找有承装（修、试）许可证的单位，否则验收通不过</li>
+            <li><strong>不要私拉乱接：</strong>私自改电、增容是违法的，被查到会罚款、停电</li>
+            <li><strong>不要忽略无功补偿：</strong>100KVA以上变压器一定要装无功补偿，否则会被罚款</li>
+            <li><strong>不要共用变压器不签协议：</strong>如果和其他租户共用变压器，一定要签用电协议，明确容量分配和电费分摊</li>
+            <li><strong>不要忘记备用电源：</strong>重要生产设备一定要有备用电源，停电一次可能损失几万甚至几十万</li>
+            <li><strong>不要省用电的钱：</strong>电力是生产的基础，容量不够、设施老化会严重影响生产，该花的钱一定要花</li>
+        </ol>
+
+        <div class="cta-box">
+            <h3>不确定你的厂房用电够不够？</h3>
+            <p>免费提交需求，我们为您匹配用电容量充足、配电设施完善的厂房，避免租了厂房才发现用电不够</p>
+            <a href="index.html#contact" class="cta-btn">免费匹配用电充足厂房</a>
+        </div>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>© 2026 厂房出租.com 版权所有 | 本站仅提供信息对接服务，不参与租赁交易</p>
+</footer>
+
+<div class="float-contact">
+    <div class="float-btn wechat" id="floatWechat" title="微信咨询">💬</div>
+    <div class="float-btn phone" id="floatPhone" title="电话咨询">📞</div>
+    <div class="float-btn" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+</div>
+
+<div class="wechat-modal" id="wechatModal">
+    <div class="wechat-modal-content">
+        <span class="wechat-modal-close" onclick="closeWechatModal()">&times;</span>
+        <div class="wechat-modal-title">微信咨询</div>
+        <div class="wechat-id-row">
+            <span id="wechatIdText">mfujun</span>
+            <button class="copy-btn" onclick="copyWechatId()">复制</button>
+        </div>
+        <div class="wechat-modal-tip">长按或点击复制微信号，打开微信添加好友</div>
+    </div>
+</div>
+
+<script>
+    var WECHAT_ID = 'mfujun';
+    var PHONE_NUM = '13764427878';
+    document.getElementById('floatWechat').addEventListener('click', function() {
+        document.getElementById('wechatIdText').textContent = WECHAT_ID;
+        document.getElementById('wechatModal').classList.add('show');
+    });
+    function closeWechatModal() { document.getElementById('wechatModal').classList.remove('show'); }
+    document.getElementById('wechatModal').addEventListener('click', function(e) {
+        if (e.target === this) closeWechatModal();
+    });
+    function copyWechatId() { copyText(WECHAT_ID, '微信号已复制，打开微信粘贴添加'); }
+    document.getElementById('floatPhone').addEventListener('click', function() {
+        var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+        if (isMobile) { window.location.href = 'tel:' + PHONE_NUM; }
+        else { copyText(PHONE_NUM, '电话号码已复制：' + PHONE_NUM); }
+    });
+    function copyText(text, successMsg) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() { alert(successMsg); }).catch(function() { fallbackCopy(text, successMsg); });
+        } else { fallbackCopy(text, successMsg); }
+    }
+    function fallbackCopy(text, successMsg) {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); alert(successMsg); } catch (e) { alert('复制失败，请手动复制：' + text); }
+        document.body.removeChild(ta);
+    }
+</script>
+
+</body>
+</html>
