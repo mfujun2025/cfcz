@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>厂房安全生产与安全管理指南（2026最新） - 厂房出租.com</title>
+    <meta name="description" content="上海厂房安全生产全攻略：安全生产法规与主体责任、安全生产标准化建设、危险源辨识与风险管控、特种设备与特种作业持证管理、职业健康防护、安全管理制度与应急预案、租赁厂房安全责任划分、常见安全生产处罚标准、避坑清单。">
+    <meta name="keywords" content="厂房安全生产,安全生产标准化,危险源辨识,特种设备管理,职业健康,安全管理,上海厂房安全">
+    <link rel="canonical" href="https://厂房出租.com/article-20.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #333; line-height: 1.8; background: #f5f7fa;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        .header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+        .logo { font-size: 22px; font-weight: 700; color: #1a56db; }
+        .logo span { color: #f59e0b; }
+        .back-link { font-size: 14px; color: #1a56db; }
+
+        .article-wrap { background: #fff; margin: 30px 0; padding: 40px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .article-tag { display: inline-block; padding: 3px 10px; background: #f3f4f6; color: #374151; font-size: 12px; border-radius: 4px; margin-bottom: 14px; }
+        .article-wrap h1 { font-size: 26px; color: #1f2937; line-height: 1.4; margin-bottom: 14px; }
+        .article-meta { font-size: 13px; color: #9ca3af; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .article-wrap h2 { font-size: 20px; color: #1a56db; margin: 30px 0 12px; padding-left: 10px; border-left: 4px solid #1a56db; }
+        .article-wrap h3 { font-size: 17px; color: #1f2937; margin: 22px 0 10px; }
+        .article-wrap p { margin-bottom: 14px; color: #444; }
+        .article-wrap ul, .article-wrap ol { margin: 10px 0 16px 24px; }
+        .article-wrap li { margin-bottom: 8px; color: #444; }
+        .article-wrap strong { color: #1f2937; }
+
+        .safe-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+        .safe-table th { background: #374151; color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+        .safe-table td { padding: 10px 12px; border-bottom: 1px solid #eee; color: #444; vertical-align: top; }
+        .safe-table tr:nth-child(even) { background: #f9fafb; }
+        .safe-table tr:hover { background: #f3f4f6; }
+
+        .flow-box { background: #f8fafc; border-left: 4px solid #374151; padding: 16px 20px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+        .flow-box h4 { font-size: 15px; color: #111827; margin-bottom: 6px; }
+        .flow-box p { margin-bottom: 0; font-size: 14px; }
+
+        .tip-box { background: #dbeafe; border-left: 4px solid #1a56db; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .tip-box p { margin-bottom: 0; color: #1e40af; }
+        .warn-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .warn-box p { margin-bottom: 0; color: #92400e; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .danger-box p { margin-bottom: 0; color: #991b1b; }
+
+        .cta-box { background: linear-gradient(135deg, #1e3a8a, #1a56db); color: #fff; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 8px; }
+        .cta-box p { font-size: 14px; opacity: 0.9; margin-bottom: 16px; }
+        .cta-btn { display: inline-block; padding: 12px 32px; background: #f59e0b; color: #fff; border-radius: 6px; font-size: 15px; font-weight: 600; }
+
+        .footer { background: #1f2937; color: #9ca3af; padding: 30px 0; text-align: center; font-size: 12px; margin-top: 40px; }
+
+        .float-contact { position: fixed; right: 20px; bottom: 80px; z-index: 99; display: flex; flex-direction: column; gap: 10px; }
+        .float-btn { width: 56px; height: 56px; background: #1a56db; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 16px rgba(26,86,219,0.4); cursor: pointer; transition: transform 0.2s; }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-btn.wechat { background: #07c160; box-shadow: 0 4px 16px rgba(7,193,96,0.4); }
+        .float-btn.phone { background: #f59e0b; box-shadow: 0 4px 16px rgba(245,158,11,0.4); }
+
+        .wechat-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; }
+        .wechat-modal.show { display: flex; }
+        .wechat-modal-content { background: #fff; border-radius: 12px; padding: 32px 28px; width: 320px; text-align: center; position: relative; }
+        .wechat-modal-close { position: absolute; top: 12px; right: 16px; font-size: 24px; color: #999; cursor: pointer; }
+        .wechat-modal-title { font-size: 18px; font-weight: 600; color: #1a56db; margin-bottom: 20px; }
+        .wechat-id-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; }
+        .wechat-id-row span { font-size: 20px; font-weight: 700; color: #1f2937; }
+        .copy-btn { padding: 6px 16px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; }
+        .wechat-modal-tip { font-size: 12px; color: #9ca3af; }
+
+        @media (max-width: 600px) {
+            .article-wrap { padding: 24px 18px; margin: 16px 0; }
+            .article-wrap h1 { font-size: 21px; }
+            .safe-table { font-size: 12px; }
+            .safe-table th, .safe-table td { padding: 8px 6px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">厂房出租<span>.com</span></a>
+        <a href="index.html" class="back-link">← 返回首页</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="article-wrap">
+        <span class="article-tag">安全指南</span>
+        <h1>厂房安全生产与安全管理指南（2026最新）</h1>
+        <div class="article-meta">发布时间：2026-09-19 &nbsp;|&nbsp; 阅读：约8分钟</div>
+
+        <p>安全生产是企业经营的底线，也是租赁厂房时最容易忽视的合规环节。一旦发生安全事故，轻则罚款整改，重则停产停业、追究刑事责任。很多企业租厂房时只关注面积租金，忽略了厂房本身的安全条件和证后安全管理义务，埋下巨大隐患。本文详细梳理厂房安全生产的法规要求、标准化建设、危险源管控和常见处罚，帮你把安全生产从"事后补救"变成"事前规划"。</p>
+
+        <div class="danger-box">
+            <p><strong>法律红线：</strong>根据《中华人民共和国安全生产法》（2021年修正），生产经营单位的主要负责人是本单位安全生产第一责任人。发生生产安全事故，对单位处30万-2000万元罚款；对主要负责人处上一年年收入40%-100%的罚款，构成犯罪的依法追究刑事责任。2026年新修订的《安全生产法》进一步强化了全员安全生产责任制。</p>
+        </div>
+
+        <h2>一、安全生产法规与主体责任</h2>
+
+        <h3>1. 核心法规</h3>
+        <ul>
+            <li><strong>《安全生产法》：</strong>安全生产的基础大法，规定生产经营单位的安全义务和责任</li>
+            <li><strong>《消防法》：</strong>消防安全的基本要求（详见本站消防指南）</li>
+            <li><strong>《特种设备安全法》：</strong>行车、叉车、压力容器等特种设备的管理要求</li>
+            <li><strong>《职业病防治法》：</strong>职业健康防护的要求</li>
+            <li><strong>《危险化学品安全管理条例》：</strong>危化品使用、储存的安全要求</li>
+            <li><strong>《工贸企业重大事故隐患判定标准》：</strong>2023年起实施，明确哪些情况属于重大事故隐患</li>
+        </ul>
+
+        <h3>2. 企业主要负责人职责</h3>
+        <ul>
+            <li>建立健全全员安全生产责任制</li>
+            <li>组织制定安全生产规章制度和操作规程</li>
+            <li>保证安全生产投入的有效实施</li>
+            <li>组织建立并落实安全风险分级管控和隐患排查治理双重预防机制</li>
+            <li>组织制定并实施生产安全事故应急救援预案</li>
+            <li>及时、如实报告生产安全事故</li>
+        </ul>
+
+        <h2>二、安全生产标准化建设</h2>
+        <p>安全生产标准化是衡量企业安全管理水平的重要标志，分为一级、二级、三级。机械、轻工、纺织、商贸、建材、有色等行业企业均应开展标准化创建：</p>
+
+        <div class="flow-box">
+            <h4>第一步：自评与申请</h4>
+            <p>对照《企业安全生产标准化基本规范》（GB/T 33000）进行自评，确认达到相应等级后向应急管理部门或评审机构提交申请。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第二步：评审</h4>
+            <p>由评审机构组织专家现场评审，检查安全管理体系、现场安全条件、设备设施、作业环境等。</p>
+        </div>
+
+        <div class="flow-box">
+            <h4>第三步：公告与发证</h4>
+            <p>评审通过后由应急管理部门公告并颁发证书。三级标准化证书有效期一般为3年，到期需复评。</p>
+        </div>
+
+        <div class="tip-box">
+            <p><strong>实用价值：</strong>安全生产标准化达标企业在保险费率、评优评先、政府扶持项目申报时有优势。上海部分区对创建达标企业有补贴。对于租赁厂房的中小企业，建议至少创建三级标准化。</p>
+        </div>
+
+        <h2>三、危险源辨识与风险管控</h2>
+        <p>每个企业都必须开展安全风险辨识，建立风险清单和管控措施。厂房常见的危险源包括：</p>
+
+        <h3>1. 机械伤害</h3>
+        <ul>
+            <li>冲床、剪板机、折弯机等设备必须有防护装置（光电保护、双手按钮、防护罩）</li>
+            <li>旋转设备（车床、铣床、磨床）严禁戴手套操作</li>
+            <li>设备传动部位必须加装防护罩</li>
+            <li>设备必须接地，定期检查线路老化</li>
+        </ul>
+
+        <h3>2. 危化品风险</h3>
+        <ul>
+            <li>油漆、稀释剂、胶粘剂、清洁剂等易燃液体必须存放在专用危化品柜中</li>
+            <li>危化品存放量不得超过规定限值（一般不超过一昼夜使用量）</li>
+            <li>使用现场必须通风良好，安装可燃气体报警装置</li>
+            <li>危化品必须有安全标签和安全技术说明书（SDS）</li>
+        </ul>
+
+        <h3>3. 粉尘爆炸风险</h3>
+        <ul>
+            <li>铝粉、镁粉、面粉、木粉、塑料粉尘等可燃粉尘达到一定浓度会爆炸</li>
+            <li>粉尘作业场所必须定期清扫，禁止扬尘</li>
+            <li>除尘系统必须符合防爆要求（泄爆、隔爆、抑爆装置）</li>
+            <li>电气设备必须防爆，禁止明火和静电</li>
+        </ul>
+
+        <h3>4. 有限空间作业</h3>
+        <ul>
+            <li>污水池、蓄水池、储罐、地坑、管道等有限空间作业必须"先通风、再检测、后作业"</li>
+            <li>必须办理有限空间作业审批，专人监护</li>
+            <li>必须配备气体检测仪、通风设备、应急救援装备</li>
+            <li>严禁盲目施救（有限空间事故多为盲目施救扩大伤亡）</li>
+        </ul>
+
+        <h3>5. 高处作业</h3>
+        <ul>
+            <li>厂房维修、设备安装、屋顶作业等高处作业必须系安全带</li>
+            <li>2米以上作业必须办理高处作业审批</li>
+            <li>临边、洞口必须设置防护栏杆和安全网</li>
+        </ul>
+
+        <h3>6. 电气安全</h3>
+        <ul>
+            <li>配电箱必须有"当心触电"标识，箱门关闭上锁</li>
+            <li>临时用电必须规范，严禁私拉乱接</li>
+            <li>移动电动工具必须使用漏电保护器</li>
+            <li>电气检修必须停电挂牌（LOTO）</li>
+        </ul>
+
+        <h2>四、特种设备与特种作业管理</h2>
+
+        <h3>1. 特种设备（必须定期检验、办理使用登记）</h3>
+        <table class="safe-table">
+            <thead>
+                <tr>
+                    <th>设备类型</th>
+                    <th>管理要求</th>
+                    <th>检验周期</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>叉车</td>
+                    <td>使用登记、定期检验、司机持证</td>
+                    <td>每年1次</td>
+                </tr>
+                <tr>
+                    <td>行车（桥式起重机）</td>
+                    <td>使用登记、定期检验、操作工持证</td>
+                    <td>每年1次（在用）</td>
+                </tr>
+                <tr>
+                    <td>压力容器（储气罐等）</td>
+                    <td>使用登记、定期检验</td>
+                    <td>每年1次（外部）</td>
+                </tr>
+                <tr>
+                    <td>压力管道</td>
+                    <td>使用登记、定期检验</td>
+                    <td>按检验规则</td>
+                </tr>
+                <tr>
+                    <td>电梯/货梯</td>
+                    <td>使用登记、维保、定期检验</td>
+                    <td>每年1次</td>
+                </tr>
+                <tr>
+                    <td>锅炉</td>
+                    <td>使用登记、定期检验、司炉持证</td>
+                    <td>每年1次</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. 特种作业人员（必须持证上岗）</h3>
+        <ul>
+            <li><strong>电工：</strong>低压电工、高压电工操作证</li>
+            <li><strong>焊工：</strong>熔化焊接与热切割作业证</li>
+            <li><strong>叉车司机：</strong>叉车司机证（N1）</li>
+            <li><strong>行车司机：</strong>起重机司机证（Q2）</li>
+            <li><strong>登高作业：</strong>高处作业证（登高架设/高处安装维护拆除）</li>
+            <li><strong>危化品作业：</strong>危化品安全作业证</li>
+        </ul>
+        <div class="danger-box">
+            <p><strong>处罚重点：</strong>特种作业人员无证上岗，责令限期改正可处5万元以下罚款；逾期未改正的，责令停产停业整顿，并处5万-10万元罚款。监管部门执法检查时查"证"非常严格。</p>
+        </div>
+
+        <h2>五、职业健康防护</h2>
+        <p>接触职业病危害因素的企业必须落实职业健康管理义务：</p>
+        <ul>
+            <li><strong>职业病危害申报：</strong>存在粉尘、噪声、有毒有害气体的企业，须向卫健部门申报职业病危害项目</li>
+            <li><strong>职业危害检测：</strong>每年委托有资质机构开展职业病危害因素检测（噪声、粉尘、苯系物等）</li>
+            <li><strong>职业健康体检：</strong>接触危害因素的员工必须进行岗前、在岗、离岗职业健康检查</li>
+            <li><strong>个人防护：</strong>为员工配备合格的防护用品（耳塞、口罩、防护眼镜、防护服）</li>
+            <li><strong>危害告知：</strong>在醒目位置设置职业病危害告知卡</li>
+            <li><strong>警示标识：</strong>作业场所设置警示标识（噪声、粉尘、当心中毒等）</li>
+        </ul>
+
+        <h2>六、安全管理制度与应急预案</h2>
+
+        <h3>1. 必须建立的制度</h3>
+        <ul>
+            <li>安全生产责任制</li>
+            <li>安全教育培训制度（新员工三级安全教育：厂级、车间级、班组级）</li>
+            <li>隐患排查治理制度（车间每日、企业每月）</li>
+            <li>危险作业审批制度（动火、有限空间、高处、吊装）</li>
+            <li>特种设备与特种作业管理制度</li>
+            <li>劳动防护用品管理制度</li>
+            <li>事故报告和调查处理制度</li>
+        </ul>
+
+        <h3>2. 应急预案</h3>
+        <ul>
+            <li>编制综合应急预案、专项应急预案（火灾、触电、机械伤害、危化品泄漏等）和现场处置方案</li>
+            <li>每年至少组织1次综合应急演练，每半年至少组织1次现场处置演练</li>
+            <li>预案按规定向应急管理部门备案（重点企业）</li>
+            <li>配备应急物资（灭火器、急救箱、应急照明、担架、防毒面具）</li>
+        </ul>
+
+        <h2>七、租赁厂房的安全责任划分</h2>
+        <p>租赁厂房涉及房东和租户两个主体，安全责任划分是关键：</p>
+        <ul>
+            <li><strong>房东责任：</strong>厂房结构安全、原有设施（电梯、行车、消防设施）的完好性、符合安全条件</li>
+            <li><strong>租户责任：</strong>生产过程中的安全管理、新增设备的安全、员工安全教育培训</li>
+            <li><strong>共同责任：</strong>同一厂区内多个租户的，房东与租户、租户与租户之间必须签订安全生产管理协议，明确各自的安全生产管理职责</li>
+        </ul>
+
+        <div class="warn-box">
+            <p><strong>特别注意：</strong>《安全生产法》第49条规定，出租方和承租方签订安全生产管理协议并明确各自职责是法定义务。未签订协议发生事故的，双方都要承担责任。租赁厂房时一定要把安全生产管理协议写进租赁合同或单独签订。</p>
+        </div>
+
+        <h2>八、常见安全生产处罚标准</h2>
+
+        <table class="safe-table">
+            <thead>
+                <tr>
+                    <th>违法情形</th>
+                    <th>处罚依据</th>
+                    <th>处罚标准</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>未建立安全生产责任制/规章制度</td>
+                    <td>《安全生产法》第94条</td>
+                    <td>责令限期改正，处10万元以下罚款</td>
+                </tr>
+                <tr>
+                    <td>未开展安全教育培训/新员工三级教育</td>
+                    <td>《安全生产法》第94条</td>
+                    <td>责令限期改正，处10万元以下罚款</td>
+                </tr>
+                <tr>
+                    <td>特种作业人员无证上岗</td>
+                    <td>《安全生产法》第97条</td>
+                    <td>责令限期改正，处5万元以下罚款；逾期不改停产整顿，处5-10万元</td>
+                </tr>
+                <tr>
+                    <td>未建立双重预防机制（风险管控+隐患排查）</td>
+                    <td>《安全生产法》第101条</td>
+                    <td>责令限期改正，处10万元以下罚款</td>
+                </tr>
+                <tr>
+                    <td>未制定应急预案/未组织演练</td>
+                    <td>《安全生产法》第97条</td>
+                    <td>责令限期改正，处10万元以下罚款</td>
+                </tr>
+                <tr>
+                    <td>出租方未与承租方签订安全管理协议</td>
+                    <td>《安全生产法》第103条</td>
+                    <td>责令限期改正，处5万元以下罚款；逾期不改停产整顿</td>
+                </tr>
+                <tr>
+                    <td>未按规定申报职业病危害</td>
+                    <td>《职业病防治法》第71条</td>
+                    <td>警告，责令限期改正，逾期不改处5-20万元罚款</td>
+                </tr>
+                <tr>
+                    <td>安全设备未定期检测/维护</td>
+                    <td>《安全生产法》第99条</td>
+                    <td>责令限期改正，处5万元以下罚款</td>
+                </tr>
+                <tr>
+                    <td>发生一般生产安全事故</td>
+                    <td>《安全生产法》第114条</td>
+                    <td>对单位处30万-100万元罚款，对责任人处上一年年收入40%-80%罚款</td>
+                </tr>
+                <tr>
+                    <td>发生较大及以上事故</td>
+                    <td>《安全生产法》第114条</td>
+                    <td>对单位处100万-2000万元罚款，可责令停产停业、吊销证照</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>九、租赁厂房时的安全考察要点</h2>
+        <ol>
+            <li><strong>查厂房安全条件：</strong>结构安全、消防设施、疏散通道、电气线路是否符合要求</li>
+            <li><strong>查特种设备：</strong>自带行车、货梯是否有使用登记证、检验是否在有效期内</li>
+            <li><strong>查环保条件：</strong>厂房是否适合你的生产（粉尘、噪声、危化品是否符合周边环境）</li>
+            <li><strong>签安全协议：</strong>与房东签订安全生产管理协议，明确双方责任</li>
+            <li><strong>查周边环境：</strong>厂房与周边建筑、居民区的安全距离是否满足要求</li>
+            <li><strong>查运输通道：</strong>危化品运输车辆进出是否方便、是否符合规定</li>
+            <li><strong>查园区管理：</strong>园区是否有统一的安全管理机构、安全管理制度</li>
+            <li><strong>查历史事故：</strong>了解该厂房/园区是否发生过安全事故</li>
+            <li><strong>查保险：</strong>确认企业安全生产责任险（安责险）的配置要求</li>
+            <li><strong>查验收手续：</strong>厂房竣工验收、消防验收文件是否齐全</li>
+        </ol>
+
+        <h2>十、安全生产避坑清单</h2>
+        <ol>
+            <li><strong>不要以为安全生产只是大企业的事：</strong>中小企业是事故高发区，监管检查重点覆盖</li>
+            <li><strong>不要无证操作特种设备：</strong>叉车、行车、电工、焊工必须持证，无证上岗直接罚</li>
+            <li><strong>不要忽略特种设备检验：</strong>自带行车、货梯要确认检验有效期，过期必须停用</li>
+            <li><strong>不要省略新员工三级教育：</strong>入职安全教育是法定义务，也是事故预防第一道防线</li>
+            <li><strong>不要让设备"裸奔"：</strong>冲床、剪板机等危险设备必须有防护装置</li>
+            <li><strong>不要忽视粉尘和危化品：</strong>粉尘爆炸、危化品事故后果极其严重，管控要求必须落实</li>
+            <li><strong>不要盲目进入有限空间：</strong>先通风、再检测、后作业，严禁盲目施救</li>
+            <li><strong>不要忘记职业病防护：</strong>噪声、粉尘、有害气体的检测和员工体检都是法定义务</li>
+            <li><strong>不要不签安全协议：</strong>租赁厂房必须签安全生产管理协议，明确责任</li>
+            <li><strong>不要瞒报事故：</strong>发生事故必须及时如实报告，瞒报会加重处罚甚至追究刑事责任</li>
+        </ol>
+
+        <div class="cta-box">
+            <h3>不确定厂房安全条件是否符合要求？</h3>
+            <p>免费提交需求，我们为您匹配安全条件合规、手续齐全、适合你行业生产的正规厂房</p>
+            <a href="index.html#contact" class="cta-btn">免费匹配安全合规厂房</a>
+        </div>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>© 2026 厂房出租.com 版权所有 | 本站仅提供信息对接服务，不参与租赁交易</p>
+</footer>
+
+<div class="float-contact">
+    <div class="float-btn wechat" id="floatWechat" title="微信咨询">💬</div>
+    <div class="float-btn phone" id="floatPhone" title="电话咨询">📞</div>
+    <div class="float-btn" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+</div>
+
+<div class="wechat-modal" id="wechatModal">
+    <div class="wechat-modal-content">
+        <span class="wechat-modal-close" onclick="closeWechatModal()">&times;</span>
+        <div class="wechat-modal-title">微信咨询</div>
+        <div class="wechat-id-row">
+            <span id="wechatIdText">mfujun</span>
+            <button class="copy-btn" onclick="copyWechatId()">复制</button>
+        </div>
+        <div class="wechat-modal-tip">长按或点击复制微信号，打开微信添加好友</div>
+    </div>
+</div>
+
+<script>
+    var WECHAT_ID = 'mfujun';
+    var PHONE_NUM = '13764427878';
+    document.getElementById('floatWechat').addEventListener('click', function() {
+        document.getElementById('wechatIdText').textContent = WECHAT_ID;
+        document.getElementById('wechatModal').classList.add('show');
+    });
+    function closeWechatModal() { document.getElementById('wechatModal').classList.remove('show'); }
+    document.getElementById('wechatModal').addEventListener('click', function(e) {
+        if (e.target === this) closeWechatModal();
+    });
+    function copyWechatId() { copyText(WECHAT_ID, '微信号已复制，打开微信粘贴添加'); }
+    document.getElementById('floatPhone').addEventListener('click', function() {
+        var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+        if (isMobile) { window.location.href = 'tel:' + PHONE_NUM; }
+        else { copyText(PHONE_NUM, '电话号码已复制：' + PHONE_NUM); }
+    });
+    function copyText(text, successMsg) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() { alert(successMsg); }).catch(function() { fallbackCopy(text, successMsg); });
+        } else { fallbackCopy(text, successMsg); }
+    }
+    function fallbackCopy(text, successMsg) {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); alert(successMsg); } catch (e) { alert('复制失败，请手动复制：' + text); }
+        document.body.removeChild(ta);
+    }
+</script>
+
+</body>
+</html>
