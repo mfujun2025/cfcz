@@ -248,7 +248,13 @@
     </url>
     <url>
         <loc>https://厂房出租.com/article-28.html</loc>
-        <lastmod>2026-09-27</lastmod>
+        <lastmod>2026-09-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://厂房出租.com/article-29.html</loc>
+        <lastmod>2026-09-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
