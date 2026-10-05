@@ -288,6 +288,31 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+        .page-btn {
+            min-width: 38px;
+            height: 38px;
+            padding: 0 14px;
+            border: 1px solid #d1d5db;
+            background: #fff;
+            color: #555;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .page-btn:hover { border-color: #1a56db; color: #1a56db; }
+        .page-btn.active { background: #1a56db; color: #fff; border-color: #1a56db; font-weight: 600; }
+        .page-btn.disabled { opacity: 0.4; cursor: not-allowed; }
+        .page-btn.disabled:hover { border-color: #d1d5db; color: #555; }
+        .page-info { font-size: 13px; color: #6b7280; margin-top: 12px; text-align: center; }
         a.article-card { display: block; color: inherit; }
         .article-card {
             background: #fff;
@@ -1044,6 +1069,8 @@
             </a>
 
         </div>
+        <div class="pagination" id="pagination"></div>
+        <div class="page-info" id="pageInfo"></div>
     </div>
 </section>
 
@@ -1173,6 +1200,58 @@
             }
         });
     });
+
+    // ===== 厂房知识文章分页（每页12篇，最新在前） =====
+    (function() {
+        var cards = Array.prototype.slice.call(document.querySelectorAll('#articles .article-card'));
+        var pagination = document.getElementById('pagination');
+        var pageInfo = document.getElementById('pageInfo');
+        if (!cards.length || !pagination) return;
+        var pageSize = 12;
+        var totalPages = Math.ceil(cards.length / pageSize);
+        var current = 1;
+        if (totalPages <= 1) { pagination.style.display = 'none'; pageInfo.style.display = 'none'; return; }
+
+        function showPage(page) {
+            var start = (page - 1) * pageSize;
+            cards.forEach(function(card, i) {
+                // DOM顺序为旧→新，倒序使最新文章排在首页
+                var idx = cards.length - 1 - i;
+                card.style.display = (idx >= start && idx < start + pageSize) ? '' : 'none';
+            });
+            var btns = pagination.querySelectorAll('.page-btn');
+            btns.forEach(function(b, j) {
+                var p = parseInt(b.getAttribute('data-page'), 10);
+                b.classList.toggle('active', p === page);
+                if (b.classList.contains('page-prev')) b.classList.toggle('disabled', page === 1);
+                if (b.classList.contains('page-next')) b.classList.toggle('disabled', page === totalPages);
+            });
+            pageInfo.textContent = '第 ' + page + ' / ' + totalPages + ' 页 · 共 ' + cards.length + ' 篇文章';
+        }
+
+        var html = '<button class="page-btn page-prev" data-page="prev">上一页</button>';
+        for (var p = 1; p <= totalPages; p++) {
+            html += '<button class="page-btn' + (p === 1 ? ' active' : '') + '" data-page="' + p + '">' + p + '</button>';
+        }
+        html += '<button class="page-btn page-next" data-page="next">下一页</button>';
+        pagination.innerHTML = html;
+
+        pagination.addEventListener('click', function(e) {
+            var btn = e.target.closest ? e.target.closest('.page-btn') : null;
+            if (!btn || btn.classList.contains('disabled')) return;
+            var dp = btn.getAttribute('data-page');
+            var target = current;
+            if (dp === 'prev') target = current - 1;
+            else if (dp === 'next') target = current + 1;
+            else target = parseInt(dp, 10);
+            if (target < 1 || target > totalPages || target === current) return;
+            current = target;
+            showPage(current);
+            document.getElementById('articles').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        showPage(1);
+    })();
 
     // ===== 悬浮客服交互 =====
     // 微信按钮：弹出微信号
