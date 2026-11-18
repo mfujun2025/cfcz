@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>厂房装修费用怎么算？抵租金与残值补偿 - 厂房出租.com</title>
+    <meta name="description" content="租厂房装修费能抵租金吗？合同期满装修归谁、提前解约残值损失谁承担？附司法解释判定规则、抵租算法、残值计算示例、必写7条合同条款与避坑清单。">
+    <meta name="keywords" content="厂房装修费用,租厂房装修,装修费抵扣租金,装修残值补偿,附合装饰装修物,厂房装修合同条款,提前退租装修损失,厂房装修投入">
+    <link rel="canonical" href="https://厂房出租.com/article-72.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #333; line-height: 1.8; background: #f5f7fa;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        .header { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+        .logo { font-size: 22px; font-weight: 700; color: #1a56db; }
+        .logo span { color: #f59e0b; }
+        .back-link { font-size: 14px; color: #1a56db; }
+
+        .article-wrap { background: #fff; margin: 30px 0; padding: 40px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+        .article-tag { display: inline-block; padding: 3px 10px; background: #f5f3ff; color: #6d28d9; font-size: 12px; border-radius: 4px; margin-bottom: 14px; }
+        .article-wrap h1 { font-size: 26px; color: #1f2937; line-height: 1.4; margin-bottom: 14px; }
+        .article-meta { font-size: 13px; color: #9ca3af; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .article-wrap h2 { font-size: 20px; color: #1a56db; margin: 30px 0 12px; padding-left: 10px; border-left: 4px solid #1a56db; }
+        .article-wrap h3 { font-size: 17px; color: #1f2937; margin: 22px 0 10px; }
+        .article-wrap p { margin-bottom: 14px; color: #444; }
+        .article-wrap ul, .article-wrap ol { margin: 10px 0 16px 24px; }
+        .article-wrap li { margin-bottom: 8px; color: #444; }
+        .article-wrap strong { color: #1f2937; }
+
+        .jd-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+        .jd-table th { background: #6d28d9; color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+        .jd-table td { padding: 10px 12px; border-bottom: 1px solid #eee; color: #444; vertical-align: top; }
+        .jd-table tr:nth-child(even) { background: #f5f3ff; }
+        .jd-table tr:hover { background: #ede9fe; }
+
+        .flow-box { background: #f8fafc; border-left: 4px solid #6d28d9; padding: 16px 20px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+        .flow-box h4 { font-size: 15px; color: #6d28d9; margin-bottom: 6px; }
+        .flow-box p { margin-bottom: 0; font-size: 14px; }
+
+        .tip-box { background: #dbeafe; border-left: 4px solid #1a56db; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .tip-box p { margin-bottom: 0; color: #1e40af; }
+        .warn-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .warn-box p { margin-bottom: 0; color: #92400e; }
+        .danger-box { background: #fee2e2; border-left: 4px solid #ef4444; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+        .danger-box p { margin-bottom: 0; color: #991b1b; }
+
+        .cta-box { background: linear-gradient(135deg, #1e3a8a, #1a56db); color: #fff; padding: 30px; border-radius: 10px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { font-size: 20px; margin-bottom: 8px; }
+        .cta-box p { font-size: 14px; opacity: 0.9; margin-bottom: 16px; }
+        .cta-btn { display: inline-block; padding: 12px 32px; background: #f59e0b; color: #fff; border-radius: 6px; font-size: 15px; font-weight: 600; }
+
+        .footer { background: #1f2937; color: #9ca3af; padding: 30px 0; text-align: center; font-size: 12px; margin-top: 40px; }
+
+        .float-contact { position: fixed; right: 20px; bottom: 80px; z-index: 99; display: flex; flex-direction: column; gap: 10px; }
+        .float-btn { width: 56px; height: 56px; background: #1a56db; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 16px rgba(26,86,219,0.4); cursor: pointer; transition: transform 0.2s; }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-btn.wechat { background: #07c160; box-shadow: 0 4px 16px rgba(7,193,96,0.4); }
+        .float-btn.phone { background: #f59e0b; box-shadow: 0 4px 16px rgba(245,158,11,0.4); }
+
+        .wechat-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; }
+        .wechat-modal.show { display: flex; }
+        .wechat-modal-content { background: #fff; border-radius: 12px; padding: 32px 28px; width: 320px; text-align: center; position: relative; }
+        .wechat-modal-close { position: absolute; top: 12px; right: 16px; font-size: 24px; color: #999; cursor: pointer; }
+        .wechat-modal-title { font-size: 18px; font-weight: 600; color: #1a56db; margin-bottom: 20px; }
+        .wechat-id-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; }
+        .wechat-id-row span { font-size: 20px; font-weight: 700; color: #1f2937; }
+        .copy-btn { padding: 6px 16px; background: #07c160; color: #fff; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; }
+        .wechat-modal-tip { font-size: 12px; color: #9ca3af; }
+
+        @media (max-width: 600px) {
+            .article-wrap { padding: 24px 18px; margin: 16px 0; }
+            .article-wrap h1 { font-size: 21px; }
+            .jd-table { font-size: 12px; }
+            .jd-table th, .jd-table td { padding: 8px 6px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">厂房出租<span>.com</span></a>
+        <a href="index.html" class="back-link">← 返回首页</a>
+    </div>
+</header>
+
+<div class="container">
+    <article class="article-wrap">
+        <span class="article-tag">装修投入</span>
+        <h1>厂房装修费用怎么算？租厂房装修投入抵租金、归属与残值补偿全指南（2026最新）</h1>
+        <div class="article-meta">发布时间：2026-11-18 &nbsp;|&nbsp; 更新：2026-11-18 &nbsp;|&nbsp; 阅读：约7分钟</div>
+
+        <p>厂房装修费用往往是租厂房过程中仅次于租金的第二大支出。一个 1000㎡ 的生产车间，地面、电气、消防、通风加上专项设施，装修投入几十万很常见。这笔钱能不能抵租金、合同期满归谁、提前解约能拿回多少，几乎全靠合同约定和几条固定法律规则。本文把厂房装修费用的构成、抵租算法、归属规则、残值计算和合同条款逐项讲清，帮你在签约前就把这笔钱算明白。</p>
+
+        <h2>一、租厂房装修，钱一般花在哪</h2>
+        <p>厂房装修与办公室装修差别很大：厂房要满足生产工艺、承重、消防和环保要求，投入集中在"看不见的部分"。</p>
+
+        <table class="jd-table">
+            <thead>
+                <tr>
+                    <th>装修项目</th>
+                    <th>常见投入内容</th>
+                    <th>能否拆走</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>地面工程</strong></td>
+                    <td>环氧地坪、耐磨地坪、防静电地板、找平</td>
+                    <td>否（已附合）</td>
+                </tr>
+                <tr>
+                    <td><strong>隔墙与吊顶</strong></td>
+                    <td>轻钢龙骨隔墙、彩钢板隔断、洁净板</td>
+                    <td>部分可拆，多有损耗</td>
+                </tr>
+                <tr>
+                    <td><strong>电气工程</strong></td>
+                    <td>动力配电、桥架、照明、增容改造</td>
+                    <td>否（已附合）</td>
+                </tr>
+                <tr>
+                    <td><strong>消防工程</strong></td>
+                    <td>喷淋、烟感、消防栓、疏散指示、防火分隔</td>
+                    <td>否（已附合）</td>
+                </tr>
+                <tr>
+                    <td><strong>通风与环保</strong></td>
+                    <td>排风管道、废气处理、除尘设备</td>
+                    <td>设备可拆，管道一般不可</td>
+                </tr>
+                <tr>
+                    <td><strong>专项设施</strong></td>
+                    <td>无尘车间围护、行车安装、空压管路、工艺水电气</td>
+                    <td>视情况，拆装成本高</td>
+                </tr>
+                <tr>
+                    <td><strong>可移动设备</strong></td>
+                    <td>货架、空调、办公家具、生产设备</td>
+                    <td>是（未附合）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>装修标准与预算的细化方法，可参考站内<a href="article-7.html">厂房装修注意事项与费用预算</a>。先明确一点：<strong>能不能拆走，决定了这部分投入在期满或解约时有没有"残值"</strong>。</p>
+
+        <h2>二、装修投入的四种结算方式</h2>
+
+        <h3>1. 租户全额自费</h3>
+        <p>最常见。租户自己出钱装修，房东一般不干预（但须书面同意改造范围）。风险是合同期短、投入大，期满可能一分钱补偿都没有。</p>
+
+        <h3>2. 房东承担或双方分摊</h3>
+        <p>适用于房东希望提升厂房品质、或厂房本身老旧需翻新的情形。分摊比例、付款节点、验收标准都要写清楚。</p>
+
+        <h3>3. 厂房装修费用抵租金（最普遍的做法）</h3>
+        <p>租户口头或书面约定"装修花的钱从租金里扣"，本质上是用装修投入换取租金减免。这种方式对双方都有吸引力：租户减轻前期现金流压力，房东不用先掏钱。</p>
+
+        <h3>4. 免租期折抵</h3>
+        <p>房东给 1-3 个月免租期，租户用这段时间完成装修。免租期与装修投入是两件事，免租期不免物业费、水电费，需在合同中分别约定。</p>
+
+        <h2>三、装修费怎么抵租金：算法与合同写法</h2>
+
+        <div class="flow-box">
+            <h4>抵租金额的一般算法</h4>
+            <p>月抵扣额 = 装修投入总额 ÷ 约定分摊月数。例如装修投入 60 万元、租期 5 年（60 个月），约定全额抵扣，则每月抵 1 万元；若原租金 3 万元/月，实际月付 2 万元。</p>
+        </div>
+
+        <p>看似简单，实操里容易出问题的地方有四个，签约时必须落到条款里：</p>
+        <ul>
+            <li><strong>抵扣起算时间：</strong>从哪个月开始抵？装修期是否也计入分摊？</li>
+            <li><strong>抵扣上限与封顶：</strong>是否约定"每月抵扣不超过当月租金的 50%"，避免抵扣额超过租金导致倒挂</li>
+                <li><strong>凭证要求：</strong>装修发票、付款凭证由谁保管，抵扣是否需要房东书面确认</li>
+            <li><strong>提前解约的清算：</strong>没抵完的部分是一次性折现、还是随合同终止失效</li>
+        </ul>
+
+        <div class="warn-box">
+            <p><strong>提醒：</strong>抵扣条款一定要写明"抵扣后租金的发票金额"。有的房东按抵扣后的实收金额开票，有的按原租金开票，直接影响你的进项税抵扣和成本入账，务必事先约定。</p>
+        </div>
+
+        <p>关于押金与抵扣的关系，注意别混同：押金是履约担保，装修抵扣是租金支付方式，两者不能相互冲抵（押金返还规则见<a href="article-17.html">退租与押金返还攻略</a>）。</p>
+
+        <h2>四、装修到底归谁：期满与解约的四种情形</h2>
+
+        <p>这是厂房装修费用争议最集中的地方。判断依据有三层：<strong>合同约定优先 → 未约定看装饰装修物是否"附合" → 再看合同因谁违约而解除</strong>。</p>
+
+        <h3>4.1 先分清"未形成附合"与"已形成附合"</h3>
+        <p><strong>未形成附合</strong>：拆除不会破坏房屋主体，如行车、空压机、货架、空调、独立生产设备。<strong>已形成附合</strong>：拆除会损坏房屋或失去使用价值，如地坪、隔墙、吊顶、水电管线、消防设施、洁净车间围护。</p>
+
+        <h3>4.2 四种情形对照</h3>
+        <table class="jd-table">
+            <thead>
+                <tr>
+                    <th>情形</th>
+                    <th>未形成附合</th>
+                    <th>已形成附合</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>合同正常期满</strong></td>
+                    <td>承租人可拆除，造成房屋毁损需恢复原状</td>
+                    <td>承租人请求补偿一般<strong>不予支持</strong>（另有约定除外）</td>
+                </tr>
+                <tr>
+                    <td><strong>房东违约导致解除</strong></td>
+                    <td>可拆除</td>
+                    <td>承租人主张剩余租期内残值损失，<strong>应予支持</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>租户违约导致解除</strong></td>
+                    <td>可拆除</td>
+                    <td>残值损失<strong>一般不予支持</strong>；房东同意利用的，在利用价值范围内适当补偿</td>
+                </tr>
+                <tr>
+                    <td><strong>合同被认定无效</strong></td>
+                    <td>房东同意利用可折价归其所有，否则可拆除</td>
+                    <td>同意利用可折价；不同意利用的，双方按过错分担现值损失</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>上表规则来自《最高人民法院关于审理城镇房屋租赁合同纠纷案件具体应用法律若干问题的解释》（法释〔2009〕11号，2020 年修正）第七至第十条：租赁期间届满或合同解除时，除当事人另有约定外，未形成附合的装饰装修物承租人可以拆除；合同解除时已形成附合的，按违约方不同分别处理，出租人违约的赔偿剩余租期内残值损失，承租人违约的不予支持。<strong>注意条文开头那句"除当事人另有约定外"——合同能约定，规则就能改。</strong></p>
+
+        <p>另一个前置条件是"经出租人同意"。<a href="https://www.spp.gov.cn/spp/ssmfdyflvdtpgz/202008/t20200831_478413.shtml" rel="nofollow" target="_blank">《民法典》第七百一十五条</a>规定：承租人经出租人同意，可以对租赁物进行改善或者增设他物；未经同意的，出租人可以请求恢复原状或者赔偿损失。这意味着<strong>擅自装修不仅拿不到补偿，还可能倒赔恢复原状的费用</strong>。</p>
+
+        <div class="danger-box">
+            <p><strong>最常见的一笔冤枉钱：</strong>租户没让房东书面确认装修方案，退租时房东以"未经同意改造"为由要求恢复原状，装修投入不仅没有补偿，还要再付一笔拆除复原费。装修前一定要拿到书面同意。</p>
+        </div>
+
+        <h2>五、残值怎么算</h2>
+
+        <p>残值指装修投入在剩余租期内尚未消耗的部分。司法实践中常用直线摊销估算，法院再结合实际成新率、可回收价值和房东利用价值作调整。</p>
+
+        <div class="flow-box">
+            <h4>残值估算示例</h4>
+            <p>装修投入 80 万元，租期 5 年（60 个月），已使用 2 年（24 个月）后因房东违约解除合同。<br>
+            剩余租期占比 = 36 / 60 = 60%<br>
+            理论残值 = 80 万 × 60% = <strong>48 万元</strong><br>
+            实际主张时法院可能结合设备可拆走部分、装修折旧程度作下调，需准备装修合同、发票、付款凭证、验收记录作为投入证明。</p>
+        </div>
+
+        <p>三个影响结果的变量要提前知道：<strong>①是否有完整票据</strong>（无票据的投入很难被认定）；<strong>②装修是否经书面同意</strong>（未经同意直接丧失主张基础）；<strong>③谁违约</strong>（自己违约基本拿不到残值补偿）。</p>
+
+        <h2>六、合同必须写清的 7 条装修条款</h2>
+
+        <ol>
+            <li><strong>装修须书面同意：</strong>方案、图纸作为合同附件，明确"房东同意按附件方案装修"</li>
+            <li><strong>装修范围与标准：</strong>哪些部位可改、哪些不能动（承重结构、消防主管道）</li>
+            <li><strong>费用承担与抵租方式：</strong>总额、分摊月数、月抵扣额、凭证要求、开票口径</li>
+            <li><strong>期满归属：</strong>明确勾选"拆除恢复原状 / 折价归房东 / 无偿归房东"中的一种（示范合同即按此设计选项）</li>
+            <li><strong>提前解约残值处理：</strong>区分房东违约、租户违约两种情形分别约定补偿比例</li>
+            <li><strong>报审与消防责任：</strong>装修改造需报审的，由谁办理、费用谁承担、未通过审批如何处理</li>
+            <li><strong>恢复原状与保证金：</strong>恢复标准、验收方式、可从保证金中扣除的范围</li>
+        </ol>
+
+        <p>国家市场监督管理总局发布的<a href="http://htsfwb.samr.gov.cn/View?id=2340996b-882d-47a4-b74d-c30784628737" rel="nofollow" target="_blank">《城镇房屋租赁合同》示范文本</a>里，装饰装修条款直接给了"由乙方拆除并恢复原状 / 折价归甲方 / 无偿归甲方"三个勾选项，并单独设置"提前终止造成的装饰装修残值损失承担方式"，可直接作为条款模板参考。合同整体条款可对照<a href="article-55.html">厂房出租合同范本指南</a>。</p>
+
+        <h2>七、常见问题</h2>
+
+        <h3>1. 已经装修完了，房东才说不同意，怎么办？</h3>
+        <p>先看有无书面或微信等可留痕的同意记录。没有任何同意证据的，法律上房东有权要求恢复原状或赔偿损失，谈判时处于被动；此时可协商"装修留用折价"以减少损失。</p>
+
+        <h3>2. 装修费抵租金，需要房东开发票吗？</h3>
+        <p>需要。抵扣的是租金，租金本身应正常开票。建议在合同中写明"抵扣部分租金同样开具发票"，并约定开票金额口径，避免后续税务处理出现差额。</p>
+
+        <h3>3. 房东口头答应"到期补偿装修费"，有效吗？</h3>
+        <p>口头约定在诉讼中举证困难，且司法解释的规则以"当事人另有约定"为优先，所以务必落到合同或补充协议里，注明金额或计算方式。</p>
+
+        <h3>4. 租期 2 年，装修投入 50 万，划算吗？</h3>
+        <p>要算单位时间摊销成本：50 万 ÷ 24 个月 ≈ 2.08 万元/月，相当于在租金上再加 2 万/月。短租期大投入的组合通常不划算，可考虑压缩装修标准、与房东谈分摊，或选择已有基础装修的厂房。</p>
+
+        <h2>八、装修投入避坑清单</h2>
+
+        <ol>
+            <li><strong>不要口头同意：</strong>装修方案务必书面确认，微信记录也要留存</li>
+            <li><strong>不要忽略"除另有约定"：</strong>期满补偿必须写进合同，否则默认拿不到</li>
+            <li><strong>不要只谈总价不谈抵扣：</strong>抵租要写明月抵扣额与起算时间</li>
+            <li><strong>不要漏掉开票口径：</strong>抵扣后租金如何开票，事先约定</li>
+            <li><strong>不要混同押金与抵扣：</strong>押金是担保，抵扣是付租方式</li>
+            <li><strong>不要不留票据：</strong>装修合同、发票、付款记录、验收单全套留存</li>
+            <li><strong>不要短租期重装修：</strong>先算月摊销成本再决定装修标准</li>
+            <li><strong>不要擅动承重与消防：</strong>结构、消防改动须报审，否则面临整改</li>
+            <li><strong>不要忽略恢复原状条款：</strong>退租时拆除复原的钱可能比装修还贵</li>
+            <li><strong>不要忘记期满归属勾选：</strong>示范合同有选项，空着等于没约定</li>
+        </ol>
+
+        <div class="tip-box">
+            <p><strong>总结：</strong>厂房装修费用的处理就三步——第一步签约前拿到书面同意并写明装修范围；第二步把费用承担、抵租算法、开票口径写进条款；第三步提前决定期满归属（拆除/折价/无偿）并约定解约时的残值分担。三步做完，这笔几十万的投入才有保障。本文为一般性信息整理，具体纠纷建议咨询专业律师。</p>
+        </div>
+
+        <div class="cta-box">
+            <h3>找带基础装修的厂房，少花一笔装修钱？</h3>
+            <p>免费提交厂房求租需求，按行业与工艺要求匹配已有地坪、配电、消防基础的房源，不向承租方收费</p>
+            <a href="index.html#contact" class="cta-btn">免费提交厂房需求</a>
+        </div>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>© 2026 厂房出租.com 版权所有 | 本站仅提供信息对接服务，不参与租赁交易</p>
+</footer>
+
+<div class="float-contact">
+    <div class="float-btn wechat" id="floatWechat" title="微信咨询">💬</div>
+    <div class="float-btn phone" id="floatPhone" title="电话咨询">📞</div>
+    <div class="float-btn" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</div>
+</div>
+
+<div class="wechat-modal" id="wechatModal">
+    <div class="wechat-modal-content">
+        <span class="wechat-modal-close" onclick="closeWechatModal()">&times;</span>
+        <div class="wechat-modal-title">微信咨询</div>
+        <div class="wechat-id-row">
+            <span id="wechatIdText">mfujun</span>
+            <button class="copy-btn" onclick="copyWechatId()">复制</button>
+        </div>
+        <div class="wechat-modal-tip">长按或点击复制微信号，打开微信添加好友</div>
+    </div>
+</div>
+
+<script>
+    var WECHAT_ID = 'mfujun';
+    var PHONE_NUM = '13764427878';
+    document.getElementById('floatWechat').addEventListener('click', function() {
+        document.getElementById('wechatIdText').textContent = WECHAT_ID;
+        document.getElementById('wechatModal').classList.add('show');
+    });
+    function closeWechatModal() { document.getElementById('wechatModal').classList.remove('show'); }
+    document.getElementById('wechatModal').addEventListener('click', function(e) {
+        if (e.target === this) closeWechatModal();
+    });
+    function copyWechatId() { copyText(WECHAT_ID, '微信号已复制，打开微信粘贴添加'); }
+    document.getElementById('floatPhone').addEventListener('click', function() {
+        var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+        if (isMobile) { window.location.href = 'tel:' + PHONE_NUM; }
+        else { copyText(PHONE_NUM, '电话号码已复制：' + PHONE_NUM); }
+    });
+    function copyText(text, successMsg) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() { alert(successMsg); }).catch(function() { fallbackCopy(text, successMsg); });
+        } else { fallbackCopy(text, successMsg); }
+    }
+    function fallbackCopy(text, successMsg) {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); alert(successMsg); } catch (e) { alert('复制失败，请手动复制：' + text); }
+        document.body.removeChild(ta);
+    }
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7edd37a60685717c6dfac22d46cde354";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
